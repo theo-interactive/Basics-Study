@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Head</title>
+        <!-- CSS 파일을 로드 -->
+        <!-- 상대경로, 절대경로 -->
+        <!-- <link rel="stylesheet" type="text/css" href="./assets/css/style.css" /> -->
+        <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+        <style>
+            /* 문서의 스타일을 정의 */
+            h1 {
+                background-color: red;
+                font-size: 40px;
+                line-height: 60px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Heading 1</h1>
+        <img src="/assets/img/sample.jpg" width="400" alt="샘플 이미지" />
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>설명</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML</td>
+                    <td>Hypertext Markup Language</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3">JavaScript</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>설명</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">HTML</td>
+                    <td>Hypertext Markup Language</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="2">CSS</td>
+                </tr>
+                <tr>
+                    <td colspan="3">JavaScript</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </body>
+</html>

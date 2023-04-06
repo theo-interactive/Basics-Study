@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <form action="/login">
+        <fieldset>
+            <legend>필수 정보</legend>
+            <div>
+                <label for="login-id">아이디</label>
+                <!-- <input id="login-id" type="text" name="login_id" placeholder="아이디를 입력해주세요." /> -->
+                <!-- <input id="login-id" type="text" name="login_id" disabled placeholder="아이디를 입력해주세요." /> -->
+                <input id="login-id" type="text" name="login_id" required placeholder="아이디를 입력해주세요." />
+            </div>
+            <div>
+                <label for="login-pw">비밀번호</label>
+                <!-- <input id="login-pw" type="password" name="login_pw" readonly value="1234" placeholder="비밀번호를 입력해주세요." /> -->
+                <input id="login-pw" type="password" name="login_pw" required placeholder="비밀번호를 입력해주세요." />
+            </div>
+            <div>
+                <input id="login-auto" type="checkbox" name="login_auto" value="1" />
+                <label for="login-auto">자동 로그인</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>추가 정보</legend>
+            <input type="range" min="0" max="200" step="50" />
+            <input type="datetime" />
+            <input type="number" min="0" max="20" value="10" step="2" />
+            <input type="tel" />
+
+            <input type="submit" value="로그인" />
+            <button type="submit">로그인</button>
+
+            <div>
+                <span>좋아하는 과일</span>
+                <div>
+                    <div>
+                        <input id="selection-1" type="radio" name="selection" value="사과" checked />
+                        <label for="selection-1">사과</label>
+                    </div>
+                    <div>
+                        <input id="selection-2" type="radio" name="selection" value="오렌지" />
+                        <label for="selection-2">오렌지</label>
+                    </div>
+                    <div>
+                        <input id="selection-3" type="radio" name="selection" value="딸기" />
+                        <label for="selection-3">딸기</label>
+                    </div>
+                    <div>
+                        <input id="selection-4" type="radio" name="selection" value="망고" />
+                        <label for="selection-4">망고</label>
+                    </div>
+                </div>
+            </div>
+
+            <label for="content">내용</label><br />
+            <textarea id="content" rows="4" placeholder="내용을 입력해주세요...">이름:
+생일:</textarea><br />
+
+            <select>
+                <option value="0">사과</option>
+                <option value="1">오렌지</option>
+                <option value="2" disabled>딸기</option>
+                <option value="3" selected>망고</option>
+            </select>
+
+            <label for="upload-file">파일 선택</label>
+            <input id="upload-file" type="file" placeholder="이미지 파일을 선택해주세요." accept="image/*" />
+            <input type="file" placeholder="이미지 파일을 선택해주세요." accept="image/*" multiple />
+        </fieldset>
+    </form>
+</body>
+</html>

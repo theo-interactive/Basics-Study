@@ -1,0 +1,125 @@
+/* 기본 폰트 사이즈 - 16px */
+/* 16 - 100% = 1em */
+/* 16 - 50% = 0.5em */
+/* 16 - 150% = 1.5em */
+/* 32 - 200% = 2em */
+body {
+    margin: 0;
+    background-color: hotpink;
+    background-color: rgb(100, 0, 255);
+    background-color: #ACCEFE;
+    background-color: #accefe;
+    background-color: #cac;
+    /* color: white; */
+    /* color: rgba(255, 255, 255, 0.5); */
+    color: hsl(0, 0%, 100%);
+    color: hsla(255, 0%, 0%, 0.5);
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.box {
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 0.75em;
+    line-height: 1.5em;
+    /* rem */
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+}
+
+div.box {
+    /* width: 50%; */
+    /* width: 100vw;  */
+    /* viewport width */
+    /* height: 400px; */
+}
+
+p.box {
+    width: 500px;
+    height: 40vh; /* viewport height */
+}
+
+.image {
+    width: 500px;
+    height: 500px;
+    background-image: url("/assets/img/sample.jpg");
+    background-image: url(/assets/img/sample.jpg);
+
+    background-repeat: repeat;
+    background-repeat: no-repeat;
+
+    background-position: 0 0;
+    /* background-position: 100px -100px;
+    background-position: -250px -250px;
+    
+    background-position: 50% 50%;
+    background-position: center center; */
+
+    background-position: 50% 50%;
+    background-size: 500px auto;
+    background-size: auto 500px;
+
+    background-size: cover;
+    /* background-size: contain; */
+}
+
+.border {
+    width: 400px;
+    height: 200px;
+    background-color: blue;
+
+    /* border-width: 20px; */
+    border-style: solid;
+    border-color: #ffffff;
+
+    border-top-width: 5px;
+    border-right-width: 10px;
+    border-bottom-width: 15px;
+    border-left-width: 20px;
+
+    border-top-color: #ffffff;
+    border-right-color: #ff0000;
+    border-bottom-color: #00ff00;
+    border-left-color: #ff00ff;
+
+    border-top-style: solid;
+    border-right-style: dotted;
+    border-bottom-style: double;
+    border-left-style: dashed;
+
+    /* border 속성의 축약형 */
+    border: 2px solid #ffffff;
+    border: none;
+    border: 0;
+
+    border-radius: 100px;
+    border-radius: 50%;
+    border-radius: 999px;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 50px;
+}
+
+.box-model {
+    /* min-width: 800px; */
+    /* min-height: 800px; */
+
+    width: 100%;
+    min-width: 400px;
+    max-width: 800px;
+    height: 50vh;
+    min-height: 200px;
+    max-height: 300px;
+
+    /* width: 300px; */
+    /* height: 300px; */
+    /* margin: 20px; */
+    /* padding: 40px; */
+    background-color: #ffffff;
+    /* border: 10px solid transparent; */
+    color: #000000;
+}

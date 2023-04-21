@@ -1,0 +1,119 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    padding: 20px;
+    background-color: black;
+    color: white;
+
+    outline-width: 5px;
+    outline-color: blue;
+    outline-style: solid;
+    outline-offset: 5px;
+
+    text-align: center;
+    text-align: left;
+    /* text-align: right; */
+
+    text-align-last: left;
+
+    /* direction: ltr; */
+    /* direction: rtl; */
+
+    vertical-align: middle;
+
+    text-decoration-line: underline;
+    /* text-decoration-line: line-through; */
+    /* text-decoration-line: overline; */
+    /* text-decoration-line: blink; */
+
+    /* text-decoration-thickness: 3px; */
+    text-decoration: underline 2px;
+
+    /* 대문자 */
+    text-transform: uppercase;   
+    /* 소문자 */
+    text-transform: lowercase;
+    /* 첫 글자들은 대문자로 처리 */
+    text-transform: capitalize;
+
+    font-size: 20px;
+    line-height: 30px;
+    text-indent: 10px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    white-space: nowrap;
+
+    text-shadow: 0 2px 4px rgba(255, 0, 0, 0.5);
+}
+
+input {
+    margin: 50px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    outline: none;
+}
+
+input:focus-visible {
+    /* outline-width: 5px;
+    outline-color: blue;
+    outline-style: solid;
+    outline-offset: 5px; */
+    border: 1px solid black;
+    outline: none;
+    /* outline: 1px solid blue; */
+    box-shadow: 0 1px 4px rgba(0, 0, 255, 0.2);
+}
+
+.box-2 {
+    width: 500px;
+    margin: 50px;
+    background-color: black;
+}
+
+.box-2 img {
+    /* display: inline; */
+    display: block;
+    width: 100%;
+    height: auto;
+    /* vertical-align: middle; */
+}
+
+.box-3 {
+    overflow: hidden;
+    width: 400px;
+    height: 40px;
+    margin: 50px;
+    background-color: black;
+    color: gray;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+
+.box-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    width: 300px;
+    max-height: 150px;
+    margin: 50px;
+    /* padding: 20px; */
+    background-color: black;
+    color: gray;
+    font-size: 20px;
+    line-height: 30px;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+}

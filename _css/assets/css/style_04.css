@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+
+.box {
+    width: 300px;
+    margin: 20px;
+    font-size: 16px;
+    line-height: 24px;
+    /* font-weight: normal;
+    font-weight: bold;
+    font-weight: lighter; */
+    /* reguler */
+    /* font-weight: 400; */
+    /* light */
+    /* font-weight: 300;  */
+    /* ultra light */ 
+    /* font-weight: 200; */
+    /* thin */
+    /* font-weight: 100;  */
+    /* semi bold */
+    /* font-weight: 500;  */
+    /* bold */
+    /* font-weight: 600; */
+    /* font-weight: 700; */
+    /* font-weight: 800; */
+    /* font-weight: 900; */
+
+    /* font-style: oblique; */
+    /* font-style: normal; */
+    /* font-style: italic; */
+
+    /* font-family: 'Noto Sans KR', 'Roboto', 'Noto Sans', -apple-system, 'Helvetica Neue', 'Arial', sans-serif; */
+	/* font-family: 'SF Pro KR', 'SF Pro Display', 'SF Pro Icons', 'Apple Gothic', 'HY Gulim', 'MalgunGothic', 'HY Dotum', 'Lexi Gulim', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; */
+
+    /* font: 'Noto Sans KR', 'Roboto', 'Noto Sans', -apple-system, 'Helvetica Neue', 'Arial', sans-serif 12px/18px; */
+
+    /* font-family: 'Nanum Myeongjo', serif; */
+}
+
+.box-1 {
+    font-family: 'Nanum Myeongjo', serif; 
+}
+
+.box-2 {
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+}

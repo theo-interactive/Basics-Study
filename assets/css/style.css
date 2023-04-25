@@ -1,129 +1,207 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
+:root {}
+
 * {
    margin: 0;
    padding: 0;
 }
 
 body {
-    /* overflow-x: hidden; */
-    /* overflow-y: hidden; */
-    overflow: hidden;
-    overflow-y: scroll;
-    /* font-family: 'Nanum Myeongjo', serif; */
+    overflow-x: hidden;
+    /* vw - 브라우저 창의 width */
+    /* vh - 브라우저 창의 height */
+    min-width: 100vw;
+    min-height: 400vh;
     font-family: futura-pt, sans-serif;
-    color: black;
-    padding-top: 46px;
 }
 
-a, a:link, a:visited {
-    color: black;
-    text-decoration: none;
-    font-size: 14px;
-    line-height: 20px;
-}
-
-a {    
-    display: inline-block;
-    vertical-align: top;
-    transition: all 200ms;
-}
-
-a:hover {
-    color: white;
-}
-
-.box {
-    margin: 30px;
-    padding: 30px;
-}
-
-.box a {
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: skyblue;
-    border-radius: 6px;
-}
-
-.box a.link_naver {
-    visibility: hidden;
-}
-
-.box a:hover {
-    padding-right: 40px;
-    padding-left: 40px;
-    border-radius: 20px;
-}
-
-.box a:active {
-    padding-right: 60px;
-    padding-left: 60px;
-    background-color: tomato;
-    border-radius: 999px;
-    font-size: 20px;
-    line-height: 26px;
-}
-
-.box:hover a {
-    display: none;
-}
-
-.box:hover a.link_naver {
-    display: inline-block;
-    visibility: visible;
-}
-
-.menu_container {
-    position: relative;
-    z-index: 100;
-}
-
-ul.menu {
-    /* position: static; */
-    /* position: relative; */
-    /* position: absolute; */
+header.header {
     position: fixed;
-    /* top: 100px; */
-    /* right: 100px; */
-    /* bottom: 100px; */
-    /* left: 100px; */
     z-index: 1000;
     top: 0;
     right: 0;
     left: 0;
-
-    background-color: white;
-    border-bottom: 1px solid lightgray;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
-
-    /* margin-top: 30px; */
-    list-style-type: none;
-}
-
-ul.menu li {
-    display: inline-block;
-    margin: 10px;
-    vertical-align: top;
-}
-
-ul.menu li a {
-    padding: 4px 8px;
-    color: gray;
-    font-size: 12px;
-    line-height: 18px;
-}
-
-ul.menu li a:hover {
-    color: black;
-    font-weight: 600;
-}
-
-.box-2 {
-    position: relative;
-    width: 500px;
-    height: 500px;
+    height: 60px;
     background-color: black;
     color: white;
-    font-size: 80px;
-    line-height: 100px;
+}
+
+header.header::before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-top: 2px solid red;
+}
+
+
+main.main {
+    display: block;
+    position: relative;
+    width: 200vw;
+    min-height: 100vh;
+    padding-top: 60px;
+    /* background-color: blue; */
+    box-sizing: border-box;
+    /* box-sizing: content-box; */
+}
+
+main.main section.section {
+    position: relative;
+    /* height: 100vh; */
+    height: calc(100vh - 60px);
+}
+
+main.main section.section .box {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 500px;
+    height: 500px;
+    background-color: dodgerblue;
+    color: white;
+}
+
+.section-1 {
+    background-color: tomato;
+}
+
+.section-2 {
+    background-color:orange;
+    opacity: 0.5;
+}
+
+.section-3 ul {
+    /* background-color: aqua; */
+}
+
+/* 
+.section-3 > ul {
+    background-color: blue;
+}
+
+.section-3 span + ul {
+    background-color: black;
+    color: white;
+} */
+
+/* .section-3 > ul li + li {
+    background-color: red;
+} */
+
+/* p + p {
+    background-color: red;
+} */
+
+
+/* :child */
+/* :first-child */
+/* :last-child */
+ul li:first-child {
+    /* background-color: blue; */
+}
+
+ul li:last-child {
+    /* background-color: red; */
+}
+
+/* .section-3 > ul > li:first-child {
+    background-color: cyan;
+} */
+
+/* .section-3 > ul > li:last-child {
+    background-color: cyan;
+} */
+
+/* .section-3 > ul > li:nth-child(1) {
+    background-color: cyan;
+} */
+
+.section-3 > ul > li:nth-child(3n+1) {
+    background-color: cyan;
+}
+
+p.hello ~ p {
+    background-color: red;
+}
+
+input.input {
+    padding: 4px 10px;
+    font-size: 20px;
+    line-height: 26px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    transition: all 200ms ease-in-out;
+}
+
+input.input:focus {
+
+}
+
+input.input:focus-visible {
+    padding: 8px 20px;
+    outline: none;
+    border-color: red;
+    font-size: 40px;
+    line-height: 60px;
+}
+
+input.input:read-only {
+    background-color: black;
+    color: white;
+}
+
+input.input:disabled {
+    background-color: gray;
+    opacity: 0.5;
+}
+
+input.checkbox {
+    width: 10px;
+    height: 10px;
+}
+
+input.checkbox + span {
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+input.checkbox:checked {
+    background-color: red;
+}
+
+input.checkbox:checked ~ span {
+    color: red;
+}
+
+main.main section.section:not(.section-3) {
+    background-color: white;
+    color: black;
+}
+
+/* main.main section.section:not(p) {
+
+} */
+
+
+section.section::before {
+    /* content: '1234567890'; */
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+}
+
+section.section::after {
+    /* content: '1234567890'; */
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
 }

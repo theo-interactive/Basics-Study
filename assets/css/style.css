@@ -1,207 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
-
-:root {}
-
 * {
    margin: 0;
    padding: 0;
 }
 
-body {
-    overflow-x: hidden;
-    /* vw - 브라우저 창의 width */
-    /* vh - 브라우저 창의 height */
-    min-width: 100vw;
-    min-height: 400vh;
-    font-family: futura-pt, sans-serif;
-}
-
-header.header {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 60px;
-    background-color: black;
-    color: white;
-}
-
-header.header::before {
-    content: '';
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-top: 2px solid red;
-}
-
-
-main.main {
-    display: block;
-    position: relative;
-    width: 200vw;
-    min-height: 100vh;
-    padding-top: 60px;
-    /* background-color: blue; */
-    box-sizing: border-box;
-    /* box-sizing: content-box; */
-}
-
-main.main section.section {
-    position: relative;
-    /* height: 100vh; */
-    height: calc(100vh - 60px);
-}
-
-main.main section.section .box {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    width: 500px;
-    height: 500px;
-    background-color: dodgerblue;
-    color: white;
-}
-
-.section-1 {
-    background-color: tomato;
-}
-
-.section-2 {
-    background-color:orange;
-    opacity: 0.5;
-}
-
-.section-3 ul {
-    /* background-color: aqua; */
-}
-
-/* 
-.section-3 > ul {
-    background-color: blue;
-}
-
-.section-3 span + ul {
-    background-color: black;
-    color: white;
-} */
-
-/* .section-3 > ul li + li {
-    background-color: red;
-} */
-
-/* p + p {
-    background-color: red;
-} */
-
-
-/* :child */
-/* :first-child */
-/* :last-child */
-ul li:first-child {
-    /* background-color: blue; */
-}
-
-ul li:last-child {
-    /* background-color: red; */
-}
-
-/* .section-3 > ul > li:first-child {
-    background-color: cyan;
-} */
-
-/* .section-3 > ul > li:last-child {
-    background-color: cyan;
-} */
-
-/* .section-3 > ul > li:nth-child(1) {
-    background-color: cyan;
-} */
-
-.section-3 > ul > li:nth-child(3n+1) {
-    background-color: cyan;
-}
-
-p.hello ~ p {
-    background-color: red;
-}
-
-input.input {
-    padding: 4px 10px;
-    font-size: 20px;
-    line-height: 26px;
-    border: 1px solid gray;
-    border-radius: 4px;
-    transition: all 200ms ease-in-out;
-}
-
-input.input:focus {
-
-}
-
-input.input:focus-visible {
-    padding: 8px 20px;
-    outline: none;
-    border-color: red;
-    font-size: 40px;
-    line-height: 60px;
-}
-
-input.input:read-only {
-    background-color: black;
-    color: white;
-}
-
-input.input:disabled {
-    background-color: gray;
-    opacity: 0.5;
-}
-
-input.checkbox {
-    width: 10px;
-    height: 10px;
-}
-
-input.checkbox + span {
+img {
     display: inline-block;
-    margin-left: 4px;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
-input.checkbox:checked {
-    background-color: red;
+.clear {
+    clear: both;
+    width: 0;
+    height: 0;
 }
 
-input.checkbox:checked ~ span {
-    color: red;
+header#header {}
+
+header#header .content-area {
+    width: 1130px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
-main.main section.section:not(.section-3) {
-    background-color: white;
-    color: black;
+header#header .special {
+    border-bottom: 1px solid #e4e8eb;
 }
 
-/* main.main section.section:not(p) {
+header#header .group {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
 
-} */
+header#header nav.navigation {
+    float: left;
+}
 
+header#header .weather {
+    float: right;
+}
 
-section.section::before {
-    /* content: '1234567890'; */
+header#header .group .content-area::after {
     content: '';
     display: block;
-    width: 100px;
-    height: 100px;
-    background-color: yellow;
+    clear: both;
+    width: 0;
+    height: 0;
 }
 
-section.section::after {
-    /* content: '1234567890'; */
+#contents {
+    width: 1130px;
+    min-height: calc(100vh - 714px);
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px 30px;
+}
+
+#contents main#main {
+    float: left;
+}
+
+#contents aside#aside {
+    float: right;
+}
+
+#contents::after {
     content: '';
     display: block;
-    width: 100px;
-    height: 100px;
-    background-color: yellow;
+    clear: both;
+    width: 0;
+    height: 0;
+}
+
+footer#footer {
+    background-color:#fafbfc;
+    border-top:1px solid #e4e8eb;
+}
+
+footer#footer .gf-content {
+    width: 1130px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px 30px;
 }

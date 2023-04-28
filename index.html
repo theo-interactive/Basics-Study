@@ -4,91 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://use.typekit.net/zzj4qmz.css" rel="stylesheet">
+    <title>네이버</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 <body>
-    <header class="header">
-        <h1>CSS</h1>
+    <header id="header">
+        <div class="special">
+            <div class="content-area">
+                <img src="/assets/img/01-01_special.jpg" alt="Special" width="1130" height="160" />
+            </div>
+        </div>
+        <div class="group">
+            <div class="content-area">
+                <nav class="navigation" role="navigation">
+                    <img src="/assets/img/01-02-01_nav.jpg" alt="navigation" width="860" height="52" />
+                </nav>
+                <div class="weather">
+                    <img src="/assets/img/01-02-02_weather.jpg" alt="weather" width="270" height="52" />
+                </div>
+                <!-- <div class="clear">&nbsp;</div> -->
+            </div>
+        </div>
     </header>
-    <main class="main">
-        <section class="section section-1">
-            <h2>Section 1</h2>
-            <div class="box">
-                <span>box</span>
+    <div id="contents">
+        <main id="main" role="main">
+            <div class="veta">
+                <img src="/assets/img/02-01-01_veta.jpg" alt="veta" width="750" height="135" />
             </div>
-        </section>
-        <section class="section section-2">
-            <h2>Section 2</h2>
-            <div class="box">
-                <span>box</span>
+        </main>
+        <aside id="aside">
+            <div class="account">
+                <img src="/assets/img/02-02-01_account.jpg" alt="account" width="350" height="135" />
             </div>
-        </section>
-        <section class="section section-3">
-            <h2>Section 3</h2>
-            <ul>
-                <li>
-                    <span>item 1</span>
-                    <ul>
-                        <li>sub item 1</li>
-                        <li>sub item 2</li>
-                    </ul>
-                </li>
-                <li>
-                    <span>item 2</span>
-                    <p>item 2 description</p>
-                    <ul>
-                        <li>sub item 1</li>
-                        <li>sub item 2</li>
-                    </ul>
-                </li>
-                <li>
-                    <span>item 3</span>
-                    <ul>
-                        <li>sub item 1</li>
-                        <li>sub item 2</li>
-                    </ul>
-                </li>
-                <li>
-                    <span>item 4</span>
-                    <ul>
-                        <li>sub item 1</li>
-                        <li>sub item 2</li>
-                    </ul>
-                </li>
-                <li>
-                    <span>item 5</span>
-                    <ul>
-                        <li>sub item 1</li>
-                        <li>sub item 2</li>
-                    </ul>
-                </li>
-                <li>
-                    <span>item 6</span>
-                    <ul>
-                        <li>sub item 1</li>
-                        <li>sub item 2</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <p>hello</p>
-            <p>hello</p>
-            <div>world</div>
-            <p class="hello">hello</p>
-            <div>world</div>
-            <p>hello</p>
-
-            <input type="text" class="input" value="안녕하세요.">
-            <input type="text" class="input" readonly value="안녕하세요.">
-            <input type="text" class="input" disabled value="안녕하세요.">
-
-            <input type="checkbox" class="checkbox"><span>체크해주세요.</span>
-        </section>
-    </main>
+        </aside>
+    </div>
+    <footer id="footer" role="contentinfo">
+        <div class="gf-content">
+            <img src="/assets/img/03_footer.jpg" alt="footer" width="1130" height="420" />
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,99 +1,189 @@
-* {
-   margin: 0;
-   padding: 0;
+/*---- Reset ----*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.container {
+/*--------*/
+.visibility_hidden {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0;
+    clip: rect(0 0 0 0);
+}
+
+main#main {
+    /* max-width: 1280px; */
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* flex container */
+main#main .grid {
     display: flex;
-    width: 100%;
-    /* height: 800px; */
-    height: 100vh;
     flex-wrap: wrap;
-    flex-direction: row;
-    /* flex-direction: row-reverse; */
-    /* flex-direction: column-reverse; */
-    background-color: lightblue;
-    /* justify-content: flex-start; */
+    padding-top: 100px;
     /* justify-content: center; */
     /* justify-content: flex-end; */
     /* justify-content: space-around; */
     /* justify-content: space-between; */
     justify-content: space-evenly;
-    /* align-items: flex-start; */
-    /* align-items: flex-end; */
-    align-items: center;
-
-    gap: 20px;
+    /* align-items: center; */
+    align-items: flex-end;
 }
 
-.item {
-    width: 150px;
-    /* height: 150px; */
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #000000;
-    color: #ffffff;
-    text-align: center;
-    font-size: 50px;
-    font-weight: 600;
-    /* line-height: 150px; */
-    line-height: 80px;
-    flex: 1;
-    flex-shrink: 1;
-    order: 1;
+/* flex item */
+main#main .grid .grid_item {
+    padding-right: 15px;
+    padding-bottom: 80px;
+    padding-left: 15px;
 }
 
-.item.item-8 {
-    flex-basis: 500px;
-    /* flex: 2; */
-    /* flex-shrink: 2; */
-    background-color: #ff0000;
-    order: 0;
-
-    /* align-self: flex-start; */
-    /* align-self: flex-end; */
-    align-self: stretch;
+main#main .grid .grid_item:nth-child(4) {
+    align-self: flex-start;
+    order: -1;
 }
 
-.container-2 {
+main#main .grid .grid_item:nth-child(4) figure {
     display: flex;
-    width: 100%;
-    height: 100px;
-    background-color: lightblue;
+    flex-direction: column;
 }
 
-.container-2 div {
-    padding-right: 20px;
-    padding-left: 20px;
-    height: 100px;
+main#main .grid .grid_item:nth-child(4) figure figcaption {
+    margin-top: initial;
+    margin-bottom: 16px;
+    /* text-align: right; */
+    align-self: flex-end;
+    order: -1;
+}
+
+.grid .grid_item figure {
+    width: 240px;
+}
+
+.grid .grid_item figure img {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+
+.grid .grid_item figure figcaption {
+    margin-top: 16px;
+    text-align: center;
+    color: #808080;
+}
+
+.indicator {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
     background-color: #000000;
     color: #ffffff;
-    font-size: 20px;
-    line-height: 100px;
 }
 
-.item-1, .item-3 {
-    width: 150px;
+.indicator::after {
+    content: '-';
+    display: inline-block;
+    vertical-align: top;
 }
 
-.item-3 {
-    text-align: right;
+/* @media only screen { */
+/* 브라우저 가로폭이 800px 보다 큰 경우 */
+@media only screen and (min-width: 800px) {
+    /* .indicator {
+        background-color: lightblue;
+    } */
 }
 
-/* .item-1 + .item-2 {
-    margin-left: 50px;
-} */
-
-/* .item-1 {
-    margin-right: auto;
+/* 500px ~ 799px */
+@media only screen and (min-width: 700px) and (max-width: 799px) {
+    /* .indicator {
+        background-color: violet;
+    } */
 }
 
-.item-3 {
-    margin-left: auto;
-} */
-
-.item-2 {
-    margin-right: auto;
-    margin-left: auto;
+/* mobile - ~ 586px */
+@media only screen and (max-width: 586px) {
+    .indicator::after {
+        content: '~ 586px'
+    }
+    body {
+        background-color: #000000;
+    }
 }
-
+/* tablet - 587px ~ 1024px */
+@media only screen and (min-width: 587px) and (max-width: 1024px) {
+    .indicator::after {
+        content: '587px ~ 1024px'
+    }
+    body {
+        background-color: #333333;
+    }
+}
+/* desktop - 1025px ~ 1280px */
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    .indicator::after {
+        content: '1025px ~ 1280px'
+    }
+    body {
+        background-color: #666666;
+    }
+}
+/* desktop - wide 1281px ~ 1600px */
+@media only screen and (min-width: 1281px) and (max-width: 1600px) {
+    .indicator::after {
+        content: '1281px ~ 1600px'
+    }
+    body {
+        background-color: #999999;
+    }
+}
+/* desktop - large 1601px ~ */
+@media only screen and (min-width: 1601px) {
+    .indicator::after {
+        content: '1601px'
+    }
+    body {
+        background-color: #aaaaaa;
+    }
+}

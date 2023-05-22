@@ -47,14 +47,95 @@ img {
     vertical-align: top;
 }
 
+.visibility_hidden {
+    position: absolute;
+    visibility: hidden !important;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    clip: rect(0 0 0 0);
+}
+
 aside#banner {
+    position:relative;
     width: 100%;
     background-color: #54b8fb;
 }
+
+aside#banner button.close_button {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    /* bottom: 0; */
+    right: 0;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    background-color: transparent;
+    border: 0;   
+    /* border: none; */
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+aside#banner button.close_button::before,
+aside#banner button.close_button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #ffffff;
+    opacity: 0.5;
+    transition: opacity 200ms ease-in-out;
+}
+
+aside#banner button.close_button:hover::before,
+aside#banner button.close_button:hover::after {
+    opacity: 1;
+}
+
+/* aside#banner button.close_button::before {
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    transform: translateY(-50%) rotate(45deg);
+} */
+/* margin-top: -2px; */
+/* aside#banner button.close_button::after {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    transform: translateX(-50%) rotate(45deg);
+} */
+/* right: 50%; */
+/* margin-right: -2px; */
+/* margin-left: -2px; */
+
+aside#banner button.close_button::before {
+    top: 50%;
+    right: 15px;
+    left: 15px;
+    height: 2px;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+aside#banner button.close_button::after {
+    top: 15px;
+    bottom: 15px;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+
 aside#banner .banner_content,
 header#header .header_content,
 main#main .main_content,
 footer#footer .footer_content {
+    position: relative;
     /* width: 1136px; */
     width: 1256px;
     margin-right: auto;
@@ -76,8 +157,52 @@ footer#footer .footer_content {
     left: 0;
 } */
 
+h1#brand {
+    position: absolute;
+    top: 25px;
+    left: 60px;
+    width: 74px;
+    height: 30px;
+}
+
+/* Bitmap 이미지 */
+/* h1#brand a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/img/ohou_main.png);
+    background-size: 108px 91px;
+    background-position: -4px -4px;
+} */
+
+/* Vector 이미지 */
+h1#brand a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* background-image: url(/assets/img/ohou_logo.svg); */
+}
+
+h1#brand a svg#brand_svg {
+    display: inline-block;
+    width: 74px;
+    height: 30px;
+    vertical-align: top;
+}
+
+h1#brand a svg#brand_svg path {
+    fill: #333333;
+    transition: fill 200ms ease-in-out;
+}
+
+h1#brand a:hover svg#brand_svg path {
+    fill: #000000;
+}
+
+
 header#header {
     position: sticky;
+    z-index: 1000;
     top: 0;
     right: 0;
     left: 0;
@@ -155,6 +280,10 @@ section#events {
     margin-top: 40px;
 } */
 
+section#category_finder {
+    position: relative;
+}
+
 main#main section + section {
     margin-top: 40px;
 }
@@ -183,6 +312,50 @@ section#best .head + .menu {
 /* section#best .list .item + .item {
     margin-left: 20px;
 } */
+
+section#best .menu {
+    position: relative;
+}
+
+button.arrow_button {
+    overflow: hidden;
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    text-indent: -9999px;
+    border: 0;
+    background-color: transparent;
+    background-image: url(/assets/img/ohou_main.png);
+    background-size: 108px 91px;
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    transition: all 240ms ease-in;
+}
+
+
+section#category_finder button.arrow_button {
+    top: 64px;
+}
+
+section#best .menu button.arrow_button {
+    top: -8px;
+}
+
+button.arrow_button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    transition: all 360ms ease-out;
+}
+
+button.arrow_button.arrow_previous {
+    left: -24px;
+    background-position: -4px -39px;
+}
+
+button.arrow_button.arrow_next {
+    right: -24px;
+    background-position: -56px -39px;
+}
 
 section#best .menu + .list {
     margin-top: 20px;

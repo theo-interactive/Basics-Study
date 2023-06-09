@@ -1,141 +1,145 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>오늘의 집</title>
+    <title>Apple</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 <body>
-    <aside id="banner">
-        <div class="banner_content">
-            <img src="/assets/img/00_banner.jpg" alt="첫 구매라면 누구나 최대 2만원 할인받기" width="1136" />
-        </div>
-        <button type="button" class="close_button">Close Button</button>
-    </aside>
-    <header id="header">
-        <nav id="navigation" role="navigation">
-            <div class="header_content">
-                <h1 id="brand">
-                    <a href="/" title="오늘의 집" target="_blank">
-                        <span class="visibility_hidden">오늘의 집</span>
-                        <svg id="brand_svg" width="74px" height="30px" viewBox="0 0 74 30">
-                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <path d="M14.21,25.17 L9.29,25.17 L9.29,20.7 C9.29,19.8991871 8.64081289,19.25 7.84,19.25 C7.03918711,19.25 6.39,19.8991871 6.39,20.7 L6.39,25.17 L1.45,25.17 C0.649187113,25.17 -5.68434189e-14,25.8191871 -5.68434189e-14,26.62 C-5.68434189e-14,27.4208129 0.649187113,28.07 1.45,28.07 L14.21,28.07 C15.0108129,28.07 15.6599999,27.4208129 15.6599999,26.62 C15.6599999,25.8191871 15.0108129,25.17 14.21,25.17 M4.51,9.15 C4.51,4.55 6.59,3.87 7.84,3.87 C9.08,3.87 11.17,4.56 11.17,9.15 L11.17,9.51 C11.17,14.11 9.08,14.79 7.84,14.79 C6.59,14.79 4.5,14.1 4.5,9.51 L4.5,9.15 L4.51,9.15 Z M7.84,17.69 C11.68,17.69 14.07,14.56 14.07,9.51 L14.07,9.15 C14.07,4.1 11.68,0.97 7.84,0.97 C3.99,0.97 1.6,4.1 1.6,9.15 L1.6,9.51 C1.6,14.56 3.99,17.7 7.84,17.7 L7.84,17.69 Z M33.38,10.35 L17.82,10.35 C17.0191871,10.35 16.37,10.9991871 16.37,11.8 C16.37,12.6008129 17.0191871,13.25 17.82,13.25 L33.38,13.25 C34.1808129,13.25 34.83,12.6008129 34.83,11.8 C34.83,10.9991871 34.1808129,10.35 33.38,10.35 M31.83,25.85 C24.75,27.68 22.38,26.64 21.69,26.1 C21.24,25.75 21.04,25.3 21.04,24.62 L21.04,23.75 L31.29,23.75 C32.09,23.75 32.75,23.1 32.75,22.3 L32.75,17.22 C32.75,16.42 32.09,15.77 31.29,15.77 L19.59,15.77 C18.7891871,15.77 18.14,16.4191871 18.14,17.22 C18.14,18.0208129 18.7891871,18.67 19.59,18.67 L29.84,18.67 L29.84,20.85 L19.58,20.85 C18.78,20.85 18.13,21.5 18.13,22.3 L18.13,24.62 C18.0838793,26.0923231 18.7456617,27.4976814 19.91,28.4 C21.11,29.33 22.85,29.79 25.12,29.79 C27.17,29.79 29.66,29.41 32.56,28.66 C33.0637445,28.5295981 33.459655,28.1403572 33.5985958,27.6389007 C33.7375367,27.1374442 33.5983995,26.5999553 33.2335958,26.2289007 C32.8687922,25.8578462 32.3337445,25.709598 31.83,25.84 M20.31,7.83 L31.11,7.83 C31.9108129,7.83 32.56,7.18081289 32.56,6.38 C32.56,5.57918711 31.9108129,4.93 31.11,4.93 L21.76,4.93 L21.76,1.45 C21.76,0.649187113 21.1108129,0 20.31,0 C19.5091871,0 18.86,0.649187113 18.86,1.45 L18.86,6.38 C18.86,7.18 19.51,7.83 20.31,7.83 M71.51,0 C72.3384271,-1.52179594e-16 73.01,0.671572875 73.01,1.5 L73.01,13.5 C73.01,14.3284271 72.3384271,15 71.51,15 C70.6815729,15 70.01,14.3284271 70.01,13.5 L70.01,1.5 C70.01,0.671572875 70.6815729,-5.13954221e-16 71.51,0 Z M64.51,13.28 C64.6886328,13.7676675 65.1138638,14.1229914 65.6255127,14.2121247 C66.1371616,14.3012579 66.6574966,14.110659 66.9905127,13.7121247 C67.3235288,13.3135904 67.4186328,12.7676675 67.24,12.28 C67.19,12.15 66.24,9.6 63.86,7.78 L67.56,3.68 C67.9445815,3.25272957 68.0404349,2.63861026 67.8043529,2.11446501 C67.568271,1.59031976 67.0448385,1.25513501 66.47,1.25994774 L57.42,1.25994774 C56.6191871,1.25994774 55.97,1.90918711 55.97,2.71 C55.97,3.51081289 56.6191871,4.16 57.42,4.16 L63.22,4.16 L56.34,11.8 C55.8015224,12.3964675 55.8485325,13.3165224 56.445,13.855 C57.0414675,14.3934776 57.9615224,14.3464675 58.5,13.75 L61.91,9.95 C63.0593997,10.8069693 63.9573809,11.9570759 64.51,13.28 M69.57,26.52 L62.56,26.52 C62.3425225,26.52 62.1339523,26.4336074 61.9801724,26.2798276 C61.8263926,26.1260477 61.74,25.9174775 61.74,25.7 L61.74,23.75 L70.39,23.75 L70.39,25.7 C70.39,26.15 70.02,26.52 69.57,26.52 M71.84,17.15 C71.04,17.15 70.39,17.8 70.39,18.6 L70.39,20.85 L61.74,20.85 L61.74,18.6 C61.74,17.7991871 61.0908129,17.15 60.29,17.15 C59.4891871,17.15 58.84,17.7991871 58.84,18.6 L58.84,25.7 C58.8454946,27.752219 60.507781,29.4145054 62.56,29.42 L69.57,29.42 C71.622219,29.4145054 73.2845054,27.752219 73.29,25.7 L73.29,18.6 C73.29,17.8 72.64,17.15 71.84,17.15 M42.47,3.87 C44.69,3.87 44.8,8.11 44.8,8.95 C44.8,9.8 44.69,14.04 42.47,14.04 C40.26,14.04 40.15,9.8 40.15,8.96 C40.15,8.1 40.26,3.87 42.47,3.87 M42.47,16.94 C44.23,16.94 45.7,16.01 46.61,14.32 C47.32,12.98 47.71,11.12 47.71,8.96 C47.71,6.8 47.32,4.94 46.61,3.59 C45.8485738,1.99327367 44.238978,0.974640614 42.47,0.97 C40.71,0.97 39.25,1.9 38.34,3.59 C37.62,4.94 37.24,6.79 37.24,8.96 C37.24,11.13 37.62,12.97 38.34,14.32 C39.0979798,15.9151491 40.7039317,16.933937 42.47,16.94 M51.41,0.49 C50.61,0.49 49.96,1.14 49.96,1.94 L49.96,19.72 C48.03,20.32 44.21,20.85 39.58,20.85 L37.38,20.85 C36.5791871,20.85 35.9300001,21.4991871 35.9300001,22.3 C35.9300001,23.1008129 36.5791871,23.75 37.38,23.75 L39.58,23.75 C42.22,23.75 46.79,23.52 49.96,22.73 L49.96,27.57 C49.9600001,28.3708128 50.6091872,29.0199999 51.41,29.0199999 C52.2108128,29.0199999 52.86,28.3708128 52.86,27.57 L52.86,1.94 C52.86,1.14 52.21,0.49 51.41,0.49"></path>
-                            </g>
+    <h1 class="visually_hidden">Apple</h1>
+    <div id="global_header">
+        <nav id="global_navigation" role="navigation">
+            <div class="gn_content">
+                <ul id="gn_list">
+                    <li class="gn_item gn_item_apple">
+                        <a class="gn_link gn_link_apple" href="/" title="Apple">
+                            <span class="gn_link_image gn_link_image--d">
+                                <svg width="14" height="44" viewBox="0 0 14 44" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8779 2.1585 1.419 1.419 0 0 0 .031.2892 1.19 1.19 0 0 0 .2169.0207 3.0935 3.0935 0 0 0 2.1586-1.1368z"></path>
+                                </svg>
+                            </span>
+                            <span class="gn_link_image gn_link_image--m">
+                                <svg width="17" height="48" viewBox="0 0 17 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m15.5752 19.0792a4.2055 4.2055 0 0 0 -2.01 3.5376 4.0931 4.0931 0 0 0 2.4908 3.7542 9.7779 9.7779 0 0 1 -1.2755 2.6351c-.7941 1.1431-1.6244 2.2862-2.8878 2.2862s-1.5883-.734-3.0443-.734c-1.42 0-1.9252.7581-3.08.7581s-1.9611-1.0589-2.8876-2.3584a11.3987 11.3987 0 0 1 -1.9373-6.1487c0-3.61 2.3464-5.523 4.6566-5.523 1.2274 0 2.25.8062 3.02.8062.734 0 1.8771-.8543 3.2729-.8543a4.3778 4.3778 0 0 1 3.6822 1.841zm-6.8586-2.0456a1.3865 1.3865 0 0 1 -.2527-.024 1.6557 1.6557 0 0 1 -.0361-.337 4.0341 4.0341 0 0 1 1.0228-2.5148 4.1571 4.1571 0 0 1 2.7314-1.4078 1.7815 1.7815 0 0 1 .0361.373 4.1487 4.1487 0 0 1 -.9867 2.587 3.6039 3.6039 0 0 1 -2.5148 1.3236z"></path>
+                                </svg>
+                            </span>
+                            <span class="gn_link_text">
+                                Apple
+                            </span>
+                        </a>
+                    </li>
+                    <li class="gn_item gn_item_menu">
+                        <div class="gn_menu_flyout">
+                            <div class="gn_menu_list">
+                                <div class="gn_menu_item">
+                                    <a class="gn_menu_link" href="/" title="Store">
+                                        <span class="gn_menu_link_text">Store</span>
+                                    </a>
+                                </div>
+                                <div class="gn_menu_item">
+                                    <a class="gn_menu_link" href="/" title="Mac">
+                                        <span class="gn_menu_link_text">Mac</span>
+                                    </a>
+                                </div>
+                                <div class="gn_menu_item">
+                                    <a class="gn_menu_link" href="/" title="iPad">
+                                        <span class="gn_menu_link_text">iPad</span>
+                                    </a>
+                                </div>
+                                <div class="gn_menu_item">
+                                    <a class="gn_menu_link" href="/" title="iPhone">
+                                        <span class="gn_menu_link_text">iPhone</span>
+                                    </a>
+                                </div>
+                                <div class="gn_menu_item">
+                                    <a class="gn_menu_link" href="/" title="Watch">
+                                        <span class="gn_menu_link_text">Watch</span>
+                                    </a>
+                                </div>
+                                <div class="gn_menu_item">
+                                    <a class="gn_menu_link" href="/" title="Vision">
+                                        <span class="gn_menu_link_text">Vision</span>
+                                    </a>
+                                </div>
+                                <div class="gn_menu_item">
+                                    <a class="gn_menu_link" href="/" title="AirPods">
+                                        <span class="gn_menu_link_text">AirPods</span>
+                                    </a>
+                                </div>
+                                <div class="gn_menu_item">
+                                    <a class="gn_menu_link" href="/" title="TV &amp; Home">
+                                        <span class="gn_menu_link_text">TV &amp; Home</span>
+                                    </a>
+                                </div>
+                                <div class="gn_menu_item">
+                                    <a class="gn_menu_link" href="/" title="Entertainment">
+                                        <span class="gn_menu_link_text">Entertainment</span>
+                                    </a>
+                                </div>
+                                <div class="gn_menu_item">
+                                    <a class="gn_menu_link" href="/" title="Accessories">
+                                        <span class="gn_menu_link_text">Accessories</span>
+                                    </a>
+                                </div>
+                                <div class="gn_menu_item">
+                                    <a class="gn_menu_link" href="/" title="Support">
+                                        <span class="gn_menu_link_text">Support</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="gn_item gn_item_search">
+                        <button class="gn_search_button" type="button">
+                            <span class="gn_search_image">
+                                <svg width="15px" height="44px" viewBox="0 0 15 44" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.298,27.202l-3.87-3.87c0.701-0.929,1.122-2.081,1.122-3.332c0-3.06-2.489-5.55-5.55-5.55c-3.06,0-5.55,2.49-5.55,5.55 c0,3.061,2.49,5.55,5.55,5.55c1.251,0,2.403-0.421,3.332-1.122l3.87,3.87c0.151,0.151,0.35,0.228,0.548,0.228 s0.396-0.076,0.548-0.228C14.601,27.995,14.601,27.505,14.298,27.202z M1.55,20c0-2.454,1.997-4.45,4.45-4.45 c2.454,0,4.45,1.997,4.45,4.45S8.454,24.45,6,24.45C3.546,24.45,1.55,22.454,1.55,20z"></path>
+                                </svg> 
+                            </span>
+                            <span class="gn_search_image">
+                                <svg width="17" height="48" viewBox="0 0 17 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m16.2294 29.9556-4.1755-4.0821a6.4711 6.4711 0 1 0 -1.2839 1.2625l4.2005 4.1066a.9.9 0 1 0 1.2588-1.287zm-14.5294-8.0017a5.2455 5.2455 0 1 1 5.2455 5.2527 5.2549 5.2549 0 0 1 -5.2455-5.2527z"></path>
+                                </svg>
+                            </span>
+                            <span class="gn_search_text">Search</span>
+                        </button>
+                    </li>
+                    <li class="gn_item gn_item_bag">
+                        <button class="gn_bag_button" type="button">
+                            <span class="gn_bag_image">
+                                <svg width="14" height="44" viewBox="0 0 14 44" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m11.3535 16.0283h-1.0205a3.4229 3.4229 0 0 0 -3.333-2.9648 3.4229 3.4229 0 0 0 -3.333 2.9648h-1.02a2.1184 2.1184 0 0 0 -2.117 2.1162v7.7155a2.1186 2.1186 0 0 0 2.1162 2.1167h8.707a2.1186 2.1186 0 0 0 2.1168-2.1167v-7.7155a2.1184 2.1184 0 0 0 -2.1165-2.1162zm-4.3535-1.8652a2.3169 2.3169 0 0 1 2.2222 1.8652h-4.4444a2.3169 2.3169 0 0 1 2.2222-1.8652zm5.37 11.6969a1.0182 1.0182 0 0 1 -1.0166 1.0171h-8.7069a1.0182 1.0182 0 0 1 -1.0165-1.0171v-7.7155a1.0178 1.0178 0 0 1 1.0166-1.0166h8.707a1.0178 1.0178 0 0 1 1.0164 1.0166z"></path>
+                                </svg>
+                            </span>
+                            <span class="gn_bag_image">
+                                <svg width="17" height="48" viewBox="0 0 17 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m13.4575 16.9268h-1.1353a3.8394 3.8394 0 0 0 -7.6444 0h-1.1353a2.6032 2.6032 0 0 0 -2.6 2.6v8.9232a2.6032 2.6032 0 0 0 2.6 2.6h9.915a2.6032 2.6032 0 0 0 2.6-2.6v-8.9231a2.6032 2.6032 0 0 0 -2.6-2.6001zm-4.9575-2.2768a2.658 2.658 0 0 1 2.6221 2.2764h-5.2442a2.658 2.658 0 0 1 2.6221-2.2764zm6.3574 13.8a1.4014 1.4014 0 0 1 -1.4 1.4h-9.9149a1.4014 1.4014 0 0 1 -1.4-1.4v-8.9231a1.4014 1.4014 0 0 1 1.4-1.4h9.915a1.4014 1.4014 0 0 1 1.4 1.4z"></path>
+                                </svg>
+                            </span>
+                            <span class="gn_bag_text">Bag</span>
+                        </button>
+                    </li>
+                </ul>
+                <div id="gn_menu_trigger">
+                    <button class="gn_menu_button" type="button">
+                        <svg width="18" height="18" viewBox="0 0 18 18">
+                            <polyline id="gn_menu_button_line_bottom" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" points="2 12, 16 12" class="gn_menu_button_line gn_menu_button_line_bottom">
+                                <animate id="gn_menu_button_line_bottom--open" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5"></animate>
+                                <animate id="gn_menu_button_line_bottom--close" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12"></animate>
+                            </polyline>
+                            <polyline id="gn_menu_button_line_top" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" points="2 5, 16 5" class="gn_menu_button_line gn_menu_button_line_top">
+                                <animate id="gn_menu_button_line_top--open" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15"></animate>
+                                <animate id="gn_menu_button_line_top--close" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5"></animate>
+                            </polyline>
                         </svg>
-                    </a>
-                </h1>
-                <img src="/assets/img/01_header_01_navigation.jpg" alt="Navigation" width="1136" />
+                    </button>
+                </div>
             </div>
         </nav>
-        <div id="submenu">
-            <div class="header_content">
-                <img src="/assets/img/01_header_02_submenu.jpg" alt="Sub Menu" width="1136" />
-            </div>
-        </div>
-    </header>
-    <main id="main" role="main">
-        <div class="main_content">
-            <section id="overview">
-                <div class="projects">
-                    <img src="/assets/img/02_main_01_overview_01_projects.jpg" alt="Projects" width="847" />
-                </div>
-                <div class="events">
-                    <img src="/assets/img/02_main_01_overview_02_events.jpg" alt="Events" width="269" />
-                </div>
-            </section>
-            <section id="categories">
-                <img src="/assets/img/02_main_02_categories.jpg" alt="Categories" width="1136" />
-            </section>
-            <section id="articles_first">
-                <div class="article">
-                    <img src="/assets/img/02_main_03_articles1_01_article1.jpg" alt="Article 1" width="1136" />
-                </div>
-                <div class="article">
-                    <img src="/assets/img/02_main_03_articles1_02_article2.jpg" alt="Article 2" width="1136" />
-                </div>
-                <div class="article">
-                    <img src="/assets/img/02_main_03_articles1_03_article3.jpg" alt="Article 3" width="1136" />
-                </div>
-                <div class="article">
-                    <img src="/assets/img/02_main_03_articles1_04_article4.jpg" alt="Article 4" width="1136" />
-                </div>
-            </section>
-            <section id="category_finder">
-                <img src="/assets/img/02_main_04_category_finder.jpg" alt="Category finder" width="1136" />
-                <button type="button" class="arrow_button arrow_previous">이전</button>
-                <button type="button" class="arrow_button arrow_next">다음</button>
-            </section>
-            <section id="today_deal">
-                <img src="/assets/img/02_main_05_today_deal.jpg" alt="Today deal" width="1136" />
-            </section>
-            <section id="articles_second">
-                <div class="article">
-                    <img src="/assets/img/02_main_06_articles2_01_article1.jpg" alt="Article 1" width="1136" />
-                </div>
-                <div class="article">
-                    <img src="/assets/img/02_main_06_articles2_02_article2.jpg" alt="Article 2" width="1136" />
-                </div>
-            </section>
-            <section id="top10">
-                <img src="/assets/img/02_main_07_top10.jpg" alt="Top 10" width="1136" />
-            </section>
-            <section id="reviews">
-                <img src="/assets/img/02_main_08_reviews.jpg" alt="Reviews" width="1136" />
-            </section>
-            <section id="events">
-                <img src="/assets/img/02_main_09_events.jpg" alt="Events" width="1136" />
-            </section>
-            <section id="best">
-                <div class="head">
-                    <div class="title">
-                        <img src="/assets/img/02_main_10_best_01_head_01_title.jpg" alt="베스트" height="29" />
-                    </div>
-                    <div class="util">
-                        <img src="/assets/img/02_main_10_best_01_head_02_util.jpg" alt="더보기" height="29" />
-                    </div>
-                </div>
-                <div class="menu">
-                    <img src="/assets/img/02_main_10_best_02_menu.jpg" alt="Menu" width="1136" />
-                    <button type="button" class="arrow_button arrow_previous">이전</button>
-                    <button type="button" class="arrow_button arrow_next">다음</button>
-                </div>
-                <!--
-                <div class="list">
-                    <div class="item">
-                        <img src="/assets/img/02_main_10_best_03_list_01_item1.jpg" alt="item 1" width="365" />
-                    </div>
-                    <div class="item">
-                        <img src="/assets/img/02_main_10_best_03_list_02_item2.jpg" alt="item 2" width="365" />
-                    </div>
-                    <div class="item">
-                        <img src="/assets/img/02_main_10_best_03_list_03_item3.jpg" alt="item 3" width="365" />
-                    </div>
-                </div>
-                -->
-                <div class="list">
-                    <div class="list_wrap">
-                        <div class="item">
-                            <img src="/assets/img/02_main_10_best_03_list_01_item1.jpg" alt="item 1" width="365" />
-                        </div>
-                        <div class="item">
-                            <img src="/assets/img/02_main_10_best_03_list_02_item2.jpg" alt="item 2" width="365" />
-                        </div>
-                        <div class="item">
-                            <img src="/assets/img/02_main_10_best_03_list_03_item3.jpg" alt="item 3" width="365" />
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-        </div>
-    </main>
-    <footer id="footer" role="contentinfo">
-        <div class="footer_content">
-            <img src="/assets/img/03_footer.jpg" alt="Footer" width="1136" />
-        </div>
-    </footer>
+    </div>
+    <main id="main" role="main"></main>
+    <footer id="global_footer" role="contentinfo"></footer>
 </body>
 </html>

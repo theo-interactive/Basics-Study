@@ -262,34 +262,85 @@ nav#global_navigation {
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
 }
-nav#global_navigation .gn_content {}
-ul#gn_list {}
+
+nav#global_navigation .gn_content {
+  max-width: 1024px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 22px;
+  padding-left: 22px;
+}
+
+ul#gn_list {
+  display: flex;
+  width: 100%;
+  margin-right: -8px;
+  margin-left: -8px;
+  justify-content: space-between;
+  align-items: center;
+}
+
 ul#gn_list li.gn_item {}
 
 ul#gn_list li.gn_item.gn_item_apple {}
 
-ul#gn_list li.gn_item.gn_item_apple a.gn_link {
-    overflow: hidden;
-    text-indent: -9999rem
+ul#gn_list li.gn_item.gn_item_apple a.gn_link.gn_link_apple,
+ul#gn_list li.gn_item.gn_item_search button.gn_search_button,
+ul#gn_list li.gn_item.gn_item_bag button.gn_bag_button {
+  overflow: hidden;
+  display: flex;
+  width: 30px;
+  height: 44px;
+  /* padding-right: 8px; */
+  /* padding-left: 8px; */
+  justify-content: center;
+  align-items: center;
+}
+ul#gn_list li.gn_item.gn_item_search button.gn_search_button {
+  width: 31px;
 }
 
 ul#gn_list li.gn_item.gn_item_apple a.gn_link.gn_link_apple {}
 
-li.gn_item.gn_item_apple a.gn_link.gn_link_apple span.gn_link_image {}
+li.gn_item.gn_item_apple a.gn_link.gn_link_apple span.gn_link_image,
+li.gn_item.gn_item_search button.gn_search_button span.gn_search_image,
+li.gn_item.gn_item_bag button.gn_bag_button span.gn_bag_image {}
 
-li.gn_item.gn_item_apple a.gn_link.gn_link_apple span.gn_link_image.gn_link_image--d {}
+li.gn_item.gn_item_apple a.gn_link.gn_link_apple span.gn_link_image svg,
+li.gn_item.gn_item_search button.gn_search_button span.gn_search_image svg,
+li.gn_item.gn_item_bag button.gn_bag_button span.gn_bag_image svg {
+  display: block;
+}
 
-li.gn_item.gn_item_apple a.gn_link.gn_link_apple span.gn_link_image.gn_link_image--m {
+li.gn_item.gn_item_apple a.gn_link.gn_link_apple span.gn_link_image svg path,
+li.gn_item.gn_item_search button.gn_search_button span.gn_search_image svg path,
+li.gn_item.gn_item_bag button.gn_bag_button span.gn_bag_image svg path {
+  fill: #ffffff;
+}
+
+li.gn_item.gn_item_apple a.gn_link.gn_link_apple span.gn_link_image.gn_link_image--d {
+  display: block;
+  width: 14px;
+  height: 44px;
+}
+
+li.gn_item.gn_item_apple a.gn_link.gn_link_apple span.gn_link_image.gn_link_image--m,
+li.gn_item.gn_item_search button.gn_search_button span.gn_search_image.gn_search_image--m,
+li.gn_item.gn_item_bag button.gn_bag_button span.gn_bag_image.gn_bag_image--m {
     display: none
 }
 
 li.gn_item.gn_item_apple a.gn_link.gn_link_apple span.gn_link_text {}
 
-ul#gn_list li.gn_item.gn_item_menu {}
+ul#gn_list li.gn_item.gn_item_menu {
+  flex-grow: 1;
+}
 
 ul#gn_list li.gn_item.gn_item_menu .gn_menu_flyout {}
 
-ul#gn_list li.gn_item.gn_item_menu .gn_menu_list {}
+ul#gn_list li.gn_item.gn_item_menu .gn_menu_list {
+  display: flex;
+}
 
 ul#gn_list li.gn_item.gn_item_menu .gn_menu_list .gn_menu_item {}
 
@@ -298,8 +349,117 @@ li.gn_item.gn_item_menu .gn_menu_list .gn_menu_item a.gn_menu_link {}
 li.gn_item.gn_item_menu .gn_menu_list .gn_menu_item a.gn_menu_link span.gn_memu_link_text {}
 
 
-ul#gn_list li.gn_item.gn_item_search {}
+ul#gn_list li.gn_item.gn_item_search {
+
+}
+
+ul#gn_list li.gn_item.gn_item_search button.gn_search_button {
+
+}
+
+ul#gn_list li.gn_item.gn_item_search button.gn_search_button span.gn_search_image {
+  
+}
+
 
 ul#gn_list li.gn_item.gn_item_bag {}
 
-#gn_menu_trigger {}
+#gn_menu_trigger {
+  display: none
+}
+
+
+
+
+.layout {
+  position: relative;
+  width: 100%;
+}
+
+.layout .layout_area {
+  max-width: 1024px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 22px;
+  padding-left: 22px;
+}
+
+.layout .layout_list {
+  width: 100%;
+  padding-top: 44px;
+  padding-bottom: 44px;
+  background-color: blue;
+}
+
+.layout .layout_list .layout_list_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -25px -10px;
+  /* margin-top: -10px;
+  margin-right: -10px;
+  margin-bottom: -10px;
+  margin-left: -10px; */
+}
+
+/* .layout .layout_list .layout_item {
+  flex: 1;
+}
+
+.layout .layout_list .layout_item + .layout_item {
+  margin-left: 20px;
+} */
+
+
+.layout .layout_list .layout_item {
+  /* width: 33.3%; */
+  width: 20%;
+  padding: 25px 10px;
+  /* padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px; */
+}
+
+.layout .layout_list .layout_item .box {
+  width: 100%;
+  height: 300px;
+  background-color: black;
+  text-align: center;
+  color: white;
+  font-size: 150px;
+  line-height: 300px;
+}
+
+/*
+각 Media 사이즈마다 간격 조정하기
+*/
+
+@media only screen and (max-width: 680px) {
+  /* .layout .layout_list .layout_item {
+    width: 33.3%
+  } */
+}
+
+@media only screen and (max-width: 360px) {
+  .layout .layout_list .layout_item {
+    width: 100%
+  }
+}
+
+@media only screen and (min-width: 361px) and (max-width: 480px) {
+  .layout .layout_list .layout_item {
+    width: 50%
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 680px) {
+  .layout .layout_list .layout_item {
+    width: 33.3%
+  }
+}
+
+@media only screen and (min-width: 681px) and (max-width: 800px) {
+  .layout .layout_list .layout_item {
+    width: 25%
+  }
+}

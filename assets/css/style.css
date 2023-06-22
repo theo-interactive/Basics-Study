@@ -1,3 +1,19 @@
+@font-face {
+	font-family:'SF Pro Icons';
+	font-style:normal;
+	font-weight:700;
+	src:local('☺'), url("/assets/fonts/sf-pro-icons_bold.woff2") format("woff2"), url("/assets/fonts/sf-pro-icons_bold.woff") format("woff"), url("/assets/fonts/sf-pro-icons_bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family:'SF Pro Icons';
+	font-style:normal;
+	font-weight:400;
+	src:url('/assets/fonts/sf-pro-icons_regular.eot');
+	src:local('☺'), url("/assets/fonts/sf-pro-icons_regular.woff2") format("woff2"), url("/assets/fonts/sf-pro-icons_regular.woff") format("woff"), url("/assets/fonts/sf-pro-icons_regular.ttf") format("truetype");
+}
+
+
 /*-- Reset. --*/
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   margin: 0;
@@ -239,10 +255,6 @@ input[autocomplete="off"]::-webkit-contacts-auto-fill-button {
     height: 0;
     clip: rect(0, 0, 0, 0);
     pointer-events: none
-}
-
-body {
-    height: 500vh
 }
 
 :root {
@@ -492,9 +504,20 @@ main#main {
 }
 main#main section.main_section{}
 section#hero_section.main_section .section_content {
+  overflow: hidden;
+  display: flex;
   position: relative;
   width: 100%;
   height: var(--content-height);
+  flex-direction: column;
+}
+
+section#hero_section.main_section .section_content + .section_content {
+  margin-top: 14px;
+}
+
+section#hero_section.main_section #hero--vision_pro.section_content {
+  justify-content: flex-end;
 }
 
 
@@ -521,16 +544,35 @@ section.main_section a.unit_link {
 
 section.main_section .unit_copy_wrapper {
   display: flex;
+  position: relative;
+  /* z-index: 1; */
   width: 100%;
   padding-top: 55px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+section.main_section #hero--vision_pro.section_content .unit_copy_wrapper {
+  padding-top: initial;
+  padding-bottom: 55px;
+}
+
+section.main_section #hero--iphone_14_pro.section_content .unit_copy_wrapper {
+  color: #ffffff;
+}
+
 section.main_section .unit_copy_wrapper h2.headline {
   font-size: 56px;
   font-weight: 600;
   line-height: 60px;
+}
+
+section.main_section #hero--vision_pro.section_content .unit_copy_wrapper h2.headline.vision_pro_logo {
+  width: 235px;
+  height: 48px;
+  background-size: 235px 48px;
+  background-image: url(/assets/img/hero_logo_apple_vision_pro_2x.png)
 }
 
 section.main_section .unit_copy_wrapper h2.headline + h3.subhead {
@@ -556,16 +598,81 @@ section.main_section .unit_copy_wrapper p.callout {
 }
 section.main_section .unit_copy_wrapper .cta_links {
   display: flex;
+  position: relative;
+  z-index: 10;
   margin-top: 7px;
+  gap: 35px;
 }
 section.main_section .unit_copy_wrapper .cta_links a.cta_link {
   display: block;
+  position: relative;
   color: #0066cc;
   font-size: 21px;
   line-height: 24px;
 }
+
+/* section.main_section .unit_copy_wrapper .cta_links a.cta_link:hover {
+  text-decoration: underline;
+} */
+
+section.main_section .unit_copy_wrapper .cta_links a.cta_link:hover::before {
+  width: calc(100% - 16px);
+}
+
+section.main_section .unit_copy_wrapper .cta_links a.cta_link::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  border-top: 2px solid #0066cc;
+  transition: width 160ms ease-in-out;
+  -webkit-transition: width 160ms ease-in-out;
+  -moz-transition: width 160ms ease-in-out;
+}
+
+section.main_section .unit_copy_wrapper .cta_links a.cta_link::after {
+  content:'';
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 0.3em;
+}
+
+/* section.main_section .unit_copy_wrapper .cta_links a.cta_link + a.cta_link {
+  margin-left: 35px;
+} */
+
 section.main_section .unit_copy_wrapper a.cta_link span {}
 section.main_section .unit_copy_wrapper a.cta_link span.name {}
 section.main_section .unit_copy_wrapper a.cta_link span.icon {}
 
 section.main_section .unit_image_wrapper {}
+section.main_section .unit_image_wrapper .unit_image {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  bottom: 0;
+  background-repeat: no-repeat;
+  transform: translateX(-50%);
+}
+
+#hero--macbook_air_15 .unit_image {
+  width: 3008px;
+  height: 736px;
+  background-size: 3008px 736px;
+  background-image: url(/assets/img/hero_01_macbook_air_15.jpg);
+}
+
+#hero--vision_pro .unit_image {
+  width: 3008px;
+  height: 736px;
+  background-size: 3008px 736px;
+  background-image: url(/assets/img/hero_02_apple_vision_pro.jpg);
+}
+
+#hero--iphone_14_pro .unit_image {
+  width: 3008px;
+  height: 736px;
+  background-size: 3008px 736px;
+  background-image: url(/assets/img/hero_03_iphone14pro.jpg);
+}

@@ -520,7 +520,6 @@ section#hero_section.main_section #hero--vision_pro.section_content {
   justify-content: flex-end;
 }
 
-
 #hero--macbook_air_15.section_content {
   --content-height: 692px;
 }
@@ -530,8 +529,6 @@ section#hero_section.main_section #hero--vision_pro.section_content {
 #hero--iphone_14_pro.section_content {
   --content-height: 736px;
 }
-
-
 
 section.main_section a.unit_link {
   position: absolute;
@@ -596,6 +593,7 @@ section.main_section .unit_copy_wrapper p.callout {
   font-weight: 400;
   line-height: 25px;
 }
+
 section.main_section .unit_copy_wrapper .cta_links {
   display: flex;
   position: relative;
@@ -675,4 +673,89 @@ section.main_section .unit_image_wrapper .unit_image {
   height: 736px;
   background-size: 3008px 736px;
   background-image: url(/assets/img/hero_03_iphone14pro.jpg);
+}
+
+section#promotion_section.main_section {
+  --item-height: 580px;
+  padding: 12px;
+}
+
+section#promotion_section.main_section .section_list_wrapper {
+  margin: -6px;
+}
+
+section#promotion_section.main_section .section_list_wrapper .section_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+section#promotion_section.main_section .section_list_wrapper .section_list .section_item {
+  width: 50%;
+  height: var(--item-height);
+  padding: 6px;
+}
+
+section#promotion_section.main_section .section_list_wrapper .section_list .section_item .unit_container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+section#promotion_section.main_section .unit_copy_wrapper {
+  padding-top: 53px;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper h2.headline {
+  font-size: 40px;
+  line-height: 44px;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper h2.headline + h3.subhead {
+  margin-top: 4px;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper h3.subhead {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper h3.subhead + p.callout {
+  margin-top: 12px;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper p.callout {
+  margin-top: 12px;
+  font-size: 17px;
+  line-height: 21px;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper .cta_links {
+  margin-top: 0.7em;
+  gap: 28px;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper .cta_links a.cta_link {
+  font-size: 17px;
+  line-height: 20px;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper .cta_links a.cta_link:hover::before {
+  width: calc(100% - 12px);
+}
+
+section#promotion_section.main_section .unit_copy_wrapper .cta_links a.cta_link::before {
+  bottom: -1px;
+  /* border-top: 1px solid #0066cc; */
+  border-top-width: 1px;
+}
+
+#promo--iphone_14 .unit_image {
+  width: 1262px;
+  height: 580px;
+  background-size: 1262px 580px;
+  background-image: url(/assets/img/promo_01_iphone14_yellow_2x.jpg);
 }

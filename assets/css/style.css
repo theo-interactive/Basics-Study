@@ -696,17 +696,44 @@ section#promotion_section.main_section .section_list_wrapper .section_list .sect
   padding: 6px;
 }
 
+/* 1024px ~ */
+@media only screen and (min-width: 1024px) {
+  section#promotion_section.main_section .section_list_wrapper .section_list .section_item {
+    width: 50%;
+  }
+}
+
+/* ~ 1023px */
+@media only screen and (max-width: 1023px) {
+  section#promotion_section.main_section .section_list_wrapper .section_list .section_item {
+    width: 100%;
+  }
+}
+
 section#promotion_section.main_section .section_list_wrapper .section_list .section_item .unit_container {
   overflow: hidden;
   position: relative;
+  display: flex;
   width: 100%;
   height: 100%;
+  flex-direction: column;
 }
 
-
+section#promotion_section.main_section .section_list_wrapper .section_list .section_item.bottom .unit_container {
+  justify-content: flex-end;
+}
 
 section#promotion_section.main_section .unit_copy_wrapper {
   padding-top: 53px;
+}
+
+section#promotion_section.main_section .section_item.bottom .unit_copy_wrapper {
+  padding-top: initial;
+  padding-bottom: 53px;
+}
+
+section#promotion_section.main_section .section_item.dark .unit_copy_wrapper {
+  color: #fff;
 }
 
 section#promotion_section.main_section .unit_copy_wrapper h2.headline {
@@ -714,13 +741,84 @@ section#promotion_section.main_section .unit_copy_wrapper h2.headline {
   line-height: 44px;
 }
 
+/* section#promotion_section.main_section #promo--vision_pro.section_item .unit_copy_wrapper h2.headline.vision_pro_logo {
+  width: 196px;
+  height: 41px;
+  background-size: 196px 41px;
+  background-repeat: no-repeat;
+  background-image: url(/assets/img/logo_apple_vision_pro_2x.png);
+} */
+
+section#promotion_section.main_section .unit_copy_wrapper h2.headline.vision_pro_logo {
+  width: 196px;
+  height: 41px;
+  background-size: 196px 41px;
+  background-repeat: no-repeat;
+  background-image: url(/assets/img/logo_apple_vision_pro_2x.png);
+}
+
+section#promotion_section.main_section .unit_copy_wrapper h2.headline.vision_pro_logo + .subhead {
+  margin-top: 0;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper h2.headline.apple_watch_series_8_logo {
+  width: 137px;
+  height: 52px;
+  background-size: 137px 52px;
+  background-repeat: no-repeat;
+  background-image: url(/assets/img/logo_apple_watch_series_8_2x.png);
+}
+
+section#promotion_section.main_section .unit_copy_wrapper h2.headline.apple_watch_series_8_logo + .subhead {
+  margin-top: 11px;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper h2.headline.trade_in_logo {
+  width: 155px;
+  height: 32px;
+  background-size: 155px 32px;
+  background-repeat: no-repeat;
+  background-image: url(/assets/img/logo_tradein_2x.png);
+}
+
+section#promotion_section.main_section .unit_copy_wrapper h2.headline.trade_in_logo + .subhead {
+  margin-top: 10px;
+}
+
+section#promotion_section.main_section .unit_copy_wrapper h2.headline.apple_card_logo {
+  width: 108px;
+  height: 33px;
+  background-size: 108px 33px;
+  background-repeat: no-repeat;
+  background-image: url(/assets/img/logo_card_2x.png);
+}
+
+section#promotion_section.main_section .unit_copy_wrapper h2.headline.apple_card_logo + .subhead {
+  margin-top: 9px;
+}
+
 section#promotion_section.main_section .unit_copy_wrapper h2.headline + h3.subhead {
   margin-top: 4px;
 }
 
 section#promotion_section.main_section .unit_copy_wrapper h3.subhead {
+  text-align: center;
   font-size: 21px;
   line-height: 26px;
+}
+
+/* section#promotion_section.main_section #promo--ipad_pro.section_item .unit_copy_wrapper h3.subhead span.logo.logo_ipad_pro_m2_chip {
+
+} */
+
+section#promotion_section.main_section .unit_copy_wrapper h3.subhead span.logo.logo_ipad_pro_m2_chip {
+  display: inline-block;
+  vertical-align: middle;
+  width: 37px;
+  height: 37px;
+  background-size: 37px 37px;
+  background-repeat: no-repeat;
+  background-image: url(/assets/img/logo_m2_chip_2x.png);
 }
 
 section#promotion_section.main_section .unit_copy_wrapper h3.subhead + p.callout {
@@ -729,6 +827,7 @@ section#promotion_section.main_section .unit_copy_wrapper h3.subhead + p.callout
 
 section#promotion_section.main_section .unit_copy_wrapper p.callout {
   margin-top: 12px;
+  text-align: center;
   font-size: 17px;
   line-height: 21px;
 }
@@ -753,9 +852,71 @@ section#promotion_section.main_section .unit_copy_wrapper .cta_links a.cta_link:
   border-top-width: 1px;
 }
 
-#promo--iphone_14 .unit_image {
+section#promotion_section.main_section .unit_image_wrapper .unit_image {
   width: 1262px;
   height: 580px;
   background-size: 1262px 580px;
+  background-repeat: no-repeat;
+}
+
+#promo--iphone_14 .unit_image {
   background-image: url(/assets/img/promo_01_iphone14_yellow_2x.jpg);
 }
+
+#promo--vision_pro .unit_image {
+  background-image: url(/assets/img/promo_02_apple_vision_pro_2x.jpg);
+}
+
+#promo--apple_watch_series_8 .unit_image {
+  background-image: url(/assets/img/promo_03_apple_watch_series_8_2x.jpg);
+}
+
+#promo--ipad_pro .unit_image {
+  background-image: url(/assets/img/promo_04_ipadpro_refresh_2x.jpg);
+}
+
+#promo--trade_in .unit_image {
+  background-image: url(/assets/img/promo_05_iphone_tradein_2x.jpg);
+}
+
+#promo--apple_card .unit_image {
+  background-image: url(/assets/img/promo_06_apple_card_2x.jpg);
+}
+
+section#gallery_section.main_section {}
+section#gallery_section.main_section .gallery {}
+
+section#gallery_section.main_section .gallery ul.gallery_indicator {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+section#gallery_section.main_section .gallery ul.gallery_indicator li {
+  width: 8px;
+  height: 8px;
+  margin-right: 7px;
+  margin-left: 7px;
+  line-height: 8px;
+}
+section#gallery_section.main_section .gallery ul.gallery_indicator li button.indicator_button {
+  width: 8px;
+  height: 8px;
+  /* border-radius: 50%; */
+  border-radius: 4px;
+  text-indent: -9999rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: background-color 180ms ease-in-out;
+  -webkit-transition: background-color 180ms ease-in-out;
+  -moz-transition: background-color 180ms ease-in-out;
+}
+section#gallery_section.main_section .gallery ul.gallery_indicator li button.indicator_button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+section#gallery_section.main_section .gallery ul.gallery_indicator li.active button.indicator_button {
+  background-color: #000;
+  cursor: default;
+}
+

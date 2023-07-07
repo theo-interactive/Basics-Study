@@ -884,7 +884,95 @@ section#promotion_section.main_section .unit_image_wrapper .unit_image {
 }
 
 section#gallery_section.main_section {}
-section#gallery_section.main_section .gallery {}
+section#gallery_section.main_section .gallery {
+  overflow: hidden;
+  width: 100%;
+}
+.gallery .gallery_wrapper {
+  --item-count: 11;
+  width: 1265px;
+  height: 667px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.gallery .gallery_wrapper .gallery_container {
+  display: flex;
+  width: calc(1265px * var(--item-count));
+  height: 100%;
+}
+.gallery .gallery_wrapper .gallery_container .gallery_item {
+  width: 1265px;
+  height: 100%;
+}
+
+.gallery .gallery_wrapper .gallery_container .gallery_item .gallery_item_wrapper {
+  position: relative;
+  width: 1250px;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.gallery .gallery_wrapper .gallery_container .gallery_item .gallery_item_wrapper a.item_link {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery .gallery_item .item_copy_wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 50px;
+  padding-left: 68px;
+  color: #fff;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.gallery .gallery_item .item_copy_wrapper button {
+  color: #fff;
+}
+.gallery .gallery_item .item_image_wrapper {}
+.gallery .gallery_item .item_image_wrapper figure.item_image {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*
+.gallery .gallery_wrapper .gallery_container .gallery_item .gallery_item_wrapper .item_copy_wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.gallery .gallery_wrapper .gallery_container .gallery_item .gallery_item_wrapper .item_copy_wrapper button {
+  color: #fff
+}
+
+.gallery .gallery_wrapper .gallery_container .gallery_item .gallery_item_wrapper .item_image_wrapper figure.item_image {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-repeat: no-repeat;
+}
+*/
+
 
 section#gallery_section.main_section .gallery ul.gallery_indicator {
   display: flex;
